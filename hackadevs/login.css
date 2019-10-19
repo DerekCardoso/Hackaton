@@ -1,0 +1,55 @@
+body{
+	font-family: 'Montserrat', sans-serif;
+}
+
+.logo{
+    text-align: center;
+}
+
+form{
+    text-align: center;
+}
+form label{
+    display: block;
+	font-size: 20px;
+	margin: 0 0 10px;
+}
+
+.input{
+	margin: 0 0 20px;
+	padding: 10px 10px;
+    width: 10%;
+    left: 50%;
+    border-radius: 10px;
+}
+
+.enviar{
+    width: 10%;
+	padding: 15px 0;
+	background:green;
+	color: white;
+	font-weight: bold;
+	font-size: 15px;
+	border: none;
+	border-radius: 5px;
+    transition: 1s;
+}
+
+.voltar{
+	margin: 100px;
+	font-weight: bold;
+	font-size: 15px;
+	color: green;
+}
+
+main a{
+	text-transform: uppercase;
+	color:green;
+	font-weight: bold;
+	font-size: 10px;
+	text-decoration: none;
+}
+
+label{
+	font-weight: bold;
+}

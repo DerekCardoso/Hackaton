@@ -1,0 +1,486 @@
+.introjs-overlay {
+  position: absolute;
+  z-index: 999999;
+  background-color: #000;
+  opacity: 0;
+  background: -moz-radial-gradient(center,ellipse cover,rgba(0,0,0,0.4) 0,rgba(0,0,0,0.9) 100%);
+  background: -webkit-gradient(radial,center center,0px,center center,100%,color-stop(0%,rgba(0,0,0,0.4)),color-stop(100%,rgba(0,0,0,0.9)));
+  background: -webkit-radial-gradient(center,ellipse cover,rgba(0,0,0,0.4) 0,rgba(0,0,0,0.9) 100%);
+  background: -o-radial-gradient(center,ellipse cover,rgba(0,0,0,0.4) 0,rgba(0,0,0,0.9) 100%);
+  background: -ms-radial-gradient(center,ellipse cover,rgba(0,0,0,0.4) 0,rgba(0,0,0,0.9) 100%);
+  background: radial-gradient(center,ellipse cover,rgba(0,0,0,0.4) 0,rgba(0,0,0,0.9) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#66000000',endColorstr='#e6000000',GradientType=1);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+  -webkit-transition: all 0.3s ease-out;
+     -moz-transition: all 0.3s ease-out;
+      -ms-transition: all 0.3s ease-out;
+       -o-transition: all 0.3s ease-out;
+          transition: all 0.3s ease-out;
+}
+
+.introjs-fixParent {
+  z-index: auto !important;
+  opacity: 1.0 !important;
+}
+
+.introjs-showElement,
+tr.introjs-showElement > td,
+tr.introjs-showElement > th {
+  z-index: 9999999 !important;
+}
+
+.introjs-relativePosition,
+tr.introjs-showElement > td,
+tr.introjs-showElement > th {
+  position: relative;
+}
+.introjs-helperLayer {
+  position: absolute;
+  z-index: 9999998;
+  background-color: #FFF;
+  background-color: rgba(255,255,255,.9);
+  border: 1px solid #000;
+  border: 1px solid rgba(0,0,0,.5);
+  border-radius: 4px;
+  box-shadow: 0 2px 15px rgba(0,0,0,.4);
+  -webkit-transition: all 0.3s ease-out;
+     -moz-transition: all 0.3s ease-out;
+      -ms-transition: all 0.3s ease-out;
+       -o-transition: all 0.3s ease-out;
+          transition: all 0.3s ease-out;
+}
+
+.introjs-helperNumberLayer {
+  position: absolute;
+  top: -16px;
+  left: -16px;
+  z-index: 9999999999 !important;
+  padding: 2px;
+  font-family: Arial, verdana, tahoma;
+  font-size: 13px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  text-shadow: 1px 1px 1px rgba(0,0,0,.3);
+  background: #ff3019; /* Old browsers */
+  background: -webkit-linear-gradient(top, #ff3019 0%, #cf0404 100%); /* Chrome10+,Safari5.1+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ff3019), color-stop(100%, #cf0404)); /* Chrome,Safari4+ */
+  background:    -moz-linear-gradient(top, #ff3019 0%, #cf0404 100%); /* FF3.6+ */
+  background:     -ms-linear-gradient(top, #ff3019 0%, #cf0404 100%); /* IE10+ */
+  background:      -o-linear-gradient(top, #ff3019 0%, #cf0404 100%); /* Opera 11.10+ */
+  background:         linear-gradient(to bottom, #ff3019 0%, #cf0404 100%);  /* W3C */
+  width: 20px;
+  height:20px;
+  line-height: 20px;
+  border: 3px solid white;
+  border-radius: 50%;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff3019', endColorstr='#cf0404', GradientType=0); /* IE6-9 */
+  filter: progid:DXImageTransform.Microsoft.Shadow(direction=135, strength=2, color=ff0000); /* IE10 text shadows */
+  box-shadow: 0 2px 5px rgba(0,0,0,.4);
+}
+
+.introjs-arrow {
+  border: 5px solid white;
+  content:'';
+  position: absolute;
+}
+.introjs-arrow.top {
+  top: -10px;
+  border-top-color:transparent;
+  border-right-color:transparent;
+  border-bottom-color:white;
+  border-left-color:transparent;
+}
+.introjs-arrow.top-right {
+  top: -10px;
+  right: 10px;
+  border-top-color:transparent;
+  border-right-color:transparent;
+  border-bottom-color:white;
+  border-left-color:transparent;
+}
+.introjs-arrow.top-middle {
+  top: -10px;
+  left: 50%;
+  margin-left: -5px;
+  border-top-color:transparent;
+  border-right-color:transparent;
+  border-bottom-color:white;
+  border-left-color:transparent;
+}
+.introjs-arrow.right {
+  right: -10px;
+  top: 10px;
+  border-top-color:transparent;
+  border-right-color:transparent;
+  border-bottom-color:transparent;
+  border-left-color:white;
+}
+.introjs-arrow.bottom {
+  bottom: -10px;
+  border-top-color:white;
+  border-right-color:transparent;
+  border-bottom-color:transparent;
+  border-left-color:transparent;
+}
+.introjs-arrow.left {
+  left: -10px;
+  top: 10px;
+  border-top-color:transparent;
+  border-right-color:white;
+  border-bottom-color:transparent;
+  border-left-color:transparent;
+}
+
+.introjs-tooltip {
+  position: absolute;
+  padding: 10px;
+  background-color: white;
+  min-width: 200px;
+  max-width: 300px;
+  border-radius: 3px;
+  box-shadow: 0 1px 10px rgba(0,0,0,.4);
+  -webkit-transition: opacity 0.1s ease-out;
+     -moz-transition: opacity 0.1s ease-out;
+      -ms-transition: opacity 0.1s ease-out;
+       -o-transition: opacity 0.1s ease-out;
+          transition: opacity 0.1s ease-out;
+}
+
+.introjs-tooltipbuttons {
+  text-align: right;
+}
+
+.introjs-button {
+  position: absolute;
+  overflow: visible;
+  display: inline-block;
+  padding: 0.3em 0.8em;
+  border: 1px solid #d4d4d4;
+  margin: 0;
+  text-decoration: none;
+  text-shadow: 1px 1px 0 #fff;
+  font: 11px/normal sans-serif;
+  color: #333;
+  white-space: nowrap;
+  cursor: pointer;
+  outline: none;
+  background-color: #ececec;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f4f4f4), to(#ececec));
+  background-image: -moz-linear-gradient(#f4f4f4, #ececec);
+  background-image: -o-linear-gradient(#f4f4f4, #ececec);
+  background-image: linear-gradient(#f4f4f4, #ececec);
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  -o-background-clip: padding-box;
+  -webkit-border-radius: 0.2em;
+  -moz-border-radius: 0.2em;
+  border-radius: 0.2em;
+  zoom: 1;
+  *display: inline;
+  margin-top: 10px;
+}
+
+.introjs-button:hover {
+  border-color: #bcbcbc;
+  text-decoration: none;
+  box-shadow: 0px 1px 1px #e3e3e3;
+}
+
+.introjs-button:focus,
+.introjs-button:active {
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ececec), to(#f4f4f4));
+  background-image: -moz-linear-gradient(#ececec, #f4f4f4);
+  background-image: -o-linear-gradient(#ececec, #f4f4f4);
+  background-image: linear-gradient(#ececec, #f4f4f4);
+}
+
+/* overrides extra padding on button elements in Firefox */
+.introjs-button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+.introjs-skipbutton {
+  margin-right: 5px;
+  color: #7a7a7a;
+}
+
+.introjs-prevbutton {
+  -webkit-border-radius: 0.2em 0 0 0.2em;
+  -moz-border-radius: 0.2em 0 0 0.2em;
+  border-radius: 0.2em 0 0 0.2em;
+  border-right: none;
+}
+
+.introjs-esquecerbutton {
+  -webkit-border-radius: 0.2em 0 0 0.2em;
+  -moz-border-radius: 0.2em 0 0 0.2em;
+  border-radius: 0.2em 0 0 0.2em;
+  border-right: none;
+}
+
+.introjs-nextbutton {
+  -webkit-border-radius: 0 0.2em 0.2em 0;
+  -moz-border-radius: 0 0.2em 0.2em 0;
+  border-radius: 0 0.2em 0.2em 0;
+}
+
+.introjs-disabled, .introjs-disabled:hover, .introjs-disabled:focus {
+  color: #9a9a9a;
+  border-color: #d4d4d4;
+  box-shadow: none;
+  cursor: default;
+  background-color: #f4f4f4;
+  background-image: none;
+  text-decoration: none;
+}
+
+.introjs-bullets {
+  text-align: center;
+}
+.introjs-bullets ul {
+  clear: both;
+  margin: 15px auto 0;
+  padding: 0;
+  display: inline-block;
+}
+.introjs-bullets ul li {
+  list-style: none;
+  float: left;
+  margin: 0 2px;
+}
+.introjs-bullets ul li a {
+  display: block;
+  width: 6px;
+  height: 6px;
+  background: #ccc;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  text-decoration: none;
+}
+.introjs-bullets ul li a:hover {
+  background: #FFF;
+}
+.introjs-bullets ul li a.active {
+  background: #999;
+}
+.introjsFloatingElement {
+  position: absolute;
+  height: 0;
+  width: 0;
+  left: 50%;
+  top: 50%;
+}
+
+/********** CUSTOMIZAÇÃO SANTOS BRASIL **********/
+
+.introjs-tooltip {
+	font-size: 1em;
+	padding: 15px 15px 7px 15px;
+	max-width: 460px !important;
+	width: 460px !important;
+	text-align: center;
+	color:#898989;
+	font-family: Calibri, Trebuchet MS, Arial;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	}
+
+.introjs-tooltiptext h3 {
+	color:#036;
+	margin-bottom: 10px;
+	font-size:20px;
+	font-weight:normal;
+	font-family: verdana, Arial, Calibri;
+	}
+
+.introjs-tooltiptext p	{
+	font-size:16px;
+       margin-bottom: 15px;
+	}
+
+.introjs-tooltipbuttons {
+	border-top:solid 1px #ccc;
+	padding-top:5px;
+	margin-top: 40px;
+	}
+
+.introjs-button {
+	border:0;
+	margin:0;
+	outline:0!important;
+	text-shadow:none;
+	font-family: Calibri, Trebuchet MS, Arial;
+	font-size:15px;
+	}
+
+.introjs-skipbutton {
+	overflow:hidden;
+	text-align:center;
+	border-radius:0;
+	margin:0;
+	position:absolute;
+	right:0;
+	top:0;
+	padding:0;
+	width: 30px;
+	height: 30px;
+	background:green;
+	font-size:15px;
+	font-weight:bold;
+	font-family: Tahoma, Verdana, Arial;
+	color:#000 !important;
+	line-height: 27px;
+
+	-webkit-border-radius: 5px;
+       -moz-border-radius: 5px;
+       border-radius: 5px;
+	}
+
+.introjs-skipbutton:before {
+	font-size:40px;
+	display:block;
+	left:50%;
+	margin-top:-20px;
+	margin-left:-20px;
+	position:absolute;
+	top:50%;
+	text-indent:0;
+	}
+
+.introjs-skipbutton:hover {
+	border:0 !important;
+	box-shadow:none !important;
+	}
+
+.introjs-prevbutton, .introjs-nextbutton, .introjs-esquecerbutton  {
+	padding:5px 15px !important;
+	text-decoration:none !important;
+	border:0;
+	}
+
+.introjs-prevbutton {
+	background:green;
+	color:#fff!important;
+	position:relative;
+	float:left;
+
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	}
+	
+.introjs-esquecerbutton {
+	background: #008000 !important;
+	color:#000!important;
+	position:absolute;
+	top: 0px;
+	right: 30px;
+	font-size: 15px;
+	font-weight:bold;
+       height: 20px;
+
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+
+	display: none;
+	}	
+
+.introjs-prevbutton:hover {
+	background:blue !important;
+    
+	}
+	
+.introjs-prevbutton:active, .introjs-prevbutton:focus {
+	background:white;
+	color:black!important;
+	}	
+
+.introjs-prevbutton.introjs-disabled {
+	background:#eee;
+	}
+	
+.introjs-nextbutton {
+	background:green;
+	color:#fff!important;
+	position:relative;
+	float:right;
+	
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	}
+
+.introjs-nextbutton:hover {
+	background: blue;
+	color:#fff!important;
+	}
+
+.introjs-nextbutton:active, .introjs-nextbutton:focus	{
+	background: white;
+	color: black!important;
+	}
+
+.introjs-nextbutton.introjs-disabled {
+	background:#eee;
+	}
+
+.intro-js-checkbox	{
+	text-align:left;
+	top: -30px;
+	position: relative;
+	height: 0px;
+	}
+
+.intro-js-checkbox input[type='checkbox']	{
+	position: relative;
+	top:2px;
+	}
+
+.intro-js-passo	{
+	position:relative;
+	top:69px;
+	margin-top:-30px;
+	}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+div {
+    display: block;
+}
+Style Attribute {
+    font-size: 14px;
+}
+body{
+    color: #333;
+    background-color: #FFF;
+}
+html {
+    font-family: Arial, Verdana, Helvetica, sans-serif;
+}
+
+::selection {
+    background: #666;
+    background-image: initial;
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-repeat-x: initial;
+    background-repeat-y: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: rgb(102, 102, 102);
+    text-shadow: none;
+    color: #fff;
+}

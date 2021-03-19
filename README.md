@@ -11,6 +11,6 @@ A proposta do grupo era criar um intro.js para ajudar o cliente da empresa a con
 assim, ajudando o mesmo a saber exatamente aonde ir ao inves dele ficar procurando por todo
 o site.
 
-💻HTML;
-🌹CSS;
-🐍JavaScript;
+💻HTML
+🌹CSS
+🐍JavaScript
